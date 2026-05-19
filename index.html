@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Milan Yadav — CS & AI Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav>
+    <a href="#hero" class="nav-logo">M.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Hire Me
+    </button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        MILAN<br>
+        <span class="accent">YADAV</span>
+      </h1>
+      <p class="hero-title">CS & AI Engineer — Far Western University, Nepal</p>
+      <p class="hero-desc">
+        3rd semester CSIT student building things that matter — from neural networks to full-stack apps.
+        Passionate about AI/ML, systems programming, and creating software with real impact.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">AI/ML Models</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3rd</div>
+        <div class="stat-label">Semester CSIT</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-header reveal">
+      <div class="section-num">01 / About</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal reveal-delay-1">
+        <p>
+          I'm <span class="highlight">Milan Yadav</span>, a 21-year-old Computer Science & IT student at
+          Far Western University, Nepal. I build everything from terminal animations to full transformer
+          architectures from scratch — because I believe the best way to understand something is to build it.
+        </p>
+        <p>
+          My academic focus spans OOP with C++, Operating Systems, Computer Architecture, and Discrete Mathematics.
+          But outside class, I'm deep in PyTorch, training neural networks, building MiniGPT transformers,
+          and experimenting with DCGANs and reinforcement learning agents.
+        </p>
+        <p>
+          I'm driven by a simple idea: <span class="highlight">software should solve real problems for real people</span>.
+          Whether it's a passive income SaaS tool or a model that understands language — I want to build it.
+        </p>
+      </div>
+      <div class="about-sidebar reveal reveal-delay-2">
+        <div class="info-item">
+          <div class="info-label">Location</div>
+          <div class="info-value">Nepal 🇳🇵</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">University</div>
+          <div class="info-value">Far Western University</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Degree</div>
+          <div class="info-value">B.Sc. CSIT — 3rd Semester</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Focus</div>
+          <div class="info-value">AI/ML Engineering · Full Stack</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Status</div>
+          <div class="info-value" style="color: var(--accent);">Open to Opportunities</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Languages</div>
+          <div class="info-value">Python, C++, JavaScript, SQL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <div class="section-num">02 / Projects</div>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="filter-bar reveal reveal-delay-1">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="systems">Systems</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card" data-category="ai">
+        <div class="project-tag">AI / ML</div>
+        <h3 class="project-title">MiniGPT Transformer</h3>
+        <p class="project-desc">A character-level GPT transformer built from scratch using PyTorch. Implements multi-head self-attention, positional encoding, and autoregressive text generation.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">NumPy</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+          <span class="project-arrow">↗</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ai">
+        <div class="project-tag">AI / ML</div>
+        <h3 class="project-title">DCGAN Image Generator</h3>
+        <p class="project-desc">Deep Convolutional GAN that generates synthetic images using adversarial training. Includes custom discriminator and generator architectures with training visualizations.</p>
+        <div class="project-stack">
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">DCGAN</span>
+          <span class="stack-tag">NumPy</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+          <span class="project-arrow">↗</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ai">
+        <div class="project-tag">AI / ML</div>
+        <h3 class="project-title">DQN Reinforcement Agent</h3>
+        <p class="project-desc">Deep Q-Network agent that learns to play environments using experience replay, target networks, and epsilon-greedy exploration strategy.</p>
+        <div class="project-stack">
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">OpenAI Gym</span>
+          <span class="stack-tag">RL</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+          <span class="project-arrow">↗</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ai">
+        <div class="project-tag">AI / ML</div>
+        <h3 class="project-title">Neural Network from Scratch</h3>
+        <p class="project-desc">Fully connected neural network implemented using only NumPy — backpropagation, gradient descent, activation functions, and loss computation, no ML frameworks.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">NumPy</span>
+          <span class="stack-tag">Math</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+          <span class="project-arrow">↗</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="web">
+        <div class="project-tag">Web</div>
+        <h3 class="project-title">Student Grading System</h3>
+        <p class="project-desc">Full-stack grading management app built in React + C++ backend. Features grade tracking, GPA calculation, exception handling, and report generation.</p>
+        <div class="project-stack">
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">C++</span>
+          <span class="stack-tag">Node.js</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+          <span class="project-arrow">↗</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="systems">
+        <div class="project-tag">Systems</div>
+        <h3 class="project-title">OS Scheduler Simulator</h3>
+        <p class="project-desc">Visual simulator for CPU scheduling algorithms — FCFS, SJF, Round Robin, and Priority. Includes Gantt charts, wait time and turnaround time calculations.</p>
+        <div class="project-stack">
+          <span class="stack-tag">C++</span>
+          <span class="stack-tag">OS Concepts</span>
+          <span class="stack-tag">Algorithms</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+          <span class="project-arrow">↗</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-header reveal">
+      <div class="section-num">03 / Skills</div>
+      <h2 class="section-title">Toolkit</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-layout">
+      <div>
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-title">Programming</div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">Python</span><span class="skill-pct">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">C++</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">SQL</span><span class="skill-pct">68%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-title">AI / ML</div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">PyTorch</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">NumPy / Pandas</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">Neural Networks</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-category-title">CS Fundamentals</div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">Data Structures & Algorithms</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">Operating Systems</span><span class="skill-pct">78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">Computer Architecture</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name">Discrete Mathematics</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-4">
+          <div class="skill-category-title">Technologies & Tools</div>
+          <div class="tech-cloud">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Git</span>
+            <span class="tech-pill">Linux</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">REST APIs</span>
+            <span class="tech-pill">HTML/CSS</span>
+            <span class="tech-pill">Transformers</span>
+            <span class="tech-pill">GANs</span>
+            <span class="tech-pill">OpenAI Gym</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <div class="section-num">04 / Contact</div>
+      <h2 class="section-title">Let's Talk</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal reveal-delay-1">
+        <p>
+          Whether you have a project in mind, a collaboration idea, or just want to connect —
+          I'm always open to meaningful conversations. Response usually within 24 hours.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:milan@example.com" class="contact-link">
+            <span class="contact-link-icon">✉</span>
+            milan@example.com
+          </a>
+          <a href="https://github.com/milan" target="_blank" class="contact-link">
+            <span class="contact-link-icon">⌥</span>
+            github.com/milan
+          </a>
+          <a href="https://linkedin.com/in/milan" target="_blank" class="contact-link">
+            <span class="contact-link-icon">↗</span>
+            linkedin.com/in/milan
+          </a>
+          <a href="#" class="contact-link">
+            <span class="contact-link-icon">⬇</span>
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Name *</label>
+              <input type="text" class="form-input" id="fname" placeholder="Your name" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-input" id="femail" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <select class="form-select" id="fsubject">
+              <option value="">Select a topic</option>
+              <option value="freelance">Freelance / Project</option>
+              <option value="internship">Internship</option>
+              <option value="collab">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message *</label>
+            <textarea class="form-textarea" id="fmessage" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <div id="formStatus" class="form-status"></div>
+          <button class="form-submit" id="submitBtn" onclick="handleSubmit(event)">
+            Send Message →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-text">© 2025 Milan Yadav. Designed &amp; built with intention.</div>
+    <div class="footer-links">
+      <a href="https://github.com/milan" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/milan" target="_blank">LinkedIn</a>
+      <a href="mailto:milan@example.com">Email</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
